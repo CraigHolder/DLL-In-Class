@@ -4,7 +4,7 @@
 
 struct Vector2D
 {
-	float x:
+	float x;
 	float y;
 };
 #endif /* definded(__VECTOR2D__) */

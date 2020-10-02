@@ -2,17 +2,26 @@
 #ifndef __GAME_OBJECT__
 #define __GAME_OBJECT__
 
-#include "Vector2D.h"\
+#include "PluginSettings.h"
+//#include "Vector2D.h"
+#include "Vector3D.h"
 
-
-class GameObject
+class PLUGIN_API GameObject
 {
-	public;
-		GameObject();
+public:
+	// Constructor
+	GameObject();
 
-		int GetID() const;
-		void SetID(int id = 0);
-		Vector2D GetPosition() const;
-		void SetPosition()float x - 0.0f, 
+	//Getters and setters
+	int GetID() const;
+	void SetID(int id = 0);
+
+	Vector3D GetPosition() const;
+	void SetPosition(float x = 0.0f, float y = 0.0f, float z = 0.0f);
+
+private:
+	int m_id;
+	Vector3D m_position;
 };
 
+#endif /* defined (__GAME_OBJECT__) */
